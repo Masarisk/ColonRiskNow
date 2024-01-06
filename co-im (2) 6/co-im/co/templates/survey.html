@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Survey - ColoDetect</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   <div class="navbar">
+       <a href="/">Home</a>
+       <!-- <a href="/survey">Survey</a> -->
+       <a href="/imaging">Imaging</a>
+       <a href="/about">About</a>
+   </div>
+   <div class="container">
+       <form action="/calculate_risk" method="post">
+       <div class="card">
+           <div class="form-group">
+               <label for="age">What is your current age?</label>
+               <input type="number" id="age" name="age">
+           </div>
+       </div>
+       <div class="container">
+           <form action="/calculate_risk" method="post">
+           <div class="card">
+               <div class="form-group">
+                   <label for="diet">What is your diet from a scale of 0-6 with 6 being the healthiest?</label>
+                   <input type="number" id="diet" name="diet">
+               </div>
+           </div>
+       </div>
+       <div class="container">
+           <form action="/calculate_risk" method="post">
+           <div class="card">
+               <div class="form-group">
+                   <label for="activity">How many months a year do you excersise?</label>
+                   <input type="number" id="activity" name="activity">
+               </div>
+           </div>
+       </div>
+       <div class="container">
+           <form action="/calculate_risk" method="post">
+           <div class="card">
+               <div class="form-group">
+                   <label for="smoking">If you have smoked, how many years have you done so?</label>
+                   <input type="number" id="smoking" name="smoking">
+               </div>
+           </div>
+       </div>
+       <div class="card">
+           <div class="form-group">
+               <label>Do you have a family history of colorectal cancer or colorectal polyps?</label>
+               <label class="radio-label"><input type="radio" name="family_history" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="family_history" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Have you previously been diagnosed with colorectal cancer or polyps?</label>
+               <label class="radio-label"><input type="radio" name="personal_history" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="personal_history" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Do you have a diet high in red and processed meats, and low in fruits, vegetables, and fiber?</label>
+               <label class="radio-label"><input type="radio" name="dietary_habits" value="unhealthy"> Unhealthy</label>
+               <label class="radio-label"><input type="radio" name="dietary_habits" value="healthy"> Healthy</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>How often do you engage in physical activity and exercise?</label>
+               <label class="radio-label"><input type="radio" name="physical_activity" value="rarely"> Rarely</label>
+               <label class="radio-label"><input type="radio" name="physical_activity" value="regularly"> Regularly</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Are you currently overweight or obese?</label>
+               <label class="radio-label"><input type="radio" name="obesity" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="obesity" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Do you smoke or have a history of smoking?</label>
+               <label class="radio-label"><input type="radio" name="smoking" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="smoking" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>How much alcohol do you consume regularly?</label>
+               <label class="radio-label"><input type="radio" name="alcohol_consumption" value="high"> High</label>
+               <label class="radio-label"><input type="radio" name="alcohol_consumption" value="moderate"> Moderate</label>
+               <label class="radio-label"><input type="radio" name="alcohol_consumption" value="low"> Low</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Do you have a history of inflammatory bowel diseases, such as Crohn's disease or ulcerative colitis?</label>
+               <label class="radio-label"><input type="radio" name="ibd" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="ibd" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Are you living with type 2 diabetes?</label>
+               <label class="radio-label"><input type="radio" name="type_2_diabetes" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="type_2_diabetes" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Have you been tested for genetic conditions like Lynch syndrome or familial adenomatous polyposis (FAP)?</label>
+               <label class="radio-label"><input type="radio" name="genetic_factors" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="genetic_factors" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <div class="card">
+           <div class="form-group">
+               <label>Have you undergone regular screenings for colorectal cancer, such as colonoscopy or stool-based tests?</label>
+               <label class="radio-label"><input type="radio" name="screening_history" value="yes"> Yes</label>
+               <label class="radio-label"><input type="radio" name="screening_history" value="no"> No</label>
+           </div>
+       </div>
+
+
+       <button type="submit">Calculate Risk</button>
+   </form>
+   </div>
+</body>
+</html>

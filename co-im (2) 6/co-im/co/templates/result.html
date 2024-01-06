@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorectal Cancer Risk Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/survey">Survey</a>
+        <a href="/imaging">Imaging</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Risk Assessment Result</h5>
+                <p class="card-text">
+                    {{ message }}
+                </p>
+                <p class="card-text">
+                    Your estimated risk of colorectal cancer is approximately {{ risk_percentage }}%.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

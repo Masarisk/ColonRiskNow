@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ColoDetect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/survey">Survey</a>
+        <a href="/imaging">Imaging</a>
+        <!-- <a href="#About">About</a> -->
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">About ColoDetect</h5>
+                <p class="card-text">
+                    {{ about_text | safe }}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
